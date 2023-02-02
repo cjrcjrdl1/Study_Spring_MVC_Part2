@@ -12,6 +12,7 @@ import javax.validation.constraints.NotNull;
 //@ScriptAssert(lang = "javascript", script = "_this.price * _this.quantity >= 10000", message = "총합이 10000원 넘게 입력해주세요")
 public class Item {
 
+    @NotNull
     private Long id;
 
     @NotBlank(message = "공백은 입력할 수 없습니다.")
@@ -21,7 +22,7 @@ public class Item {
     private Integer price;
 
     @NotNull
-    @Max(9999)
+//    @Max(9999)
     private Integer quantity;
 
     public Item() {
